@@ -1,9 +1,0 @@
-let mapleader=","
-set gfn=DejaVu\ Sans\ Mono:h13
-set ft=ruby
-set nolist
-set go=
-color sunburst
-
-" set the highlightcolor to something nicer
-hi Visual           guifg=NONE        guibg=#4D2CBC     gui=NONE      ctermfg=NONE        ctermbg=236    cterm=NONE

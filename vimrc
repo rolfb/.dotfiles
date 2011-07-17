@@ -66,3 +66,7 @@ if &t_Co > 2 || has("gui_running")
    " switch syntax highlighting on, when the terminal has colors
    syntax on
 endif
+
+
+" Some overrides for the colorschemes
+hi Search guifg=NONE gui=underline
