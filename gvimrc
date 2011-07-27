@@ -10,6 +10,9 @@ if has("gui_macvim")
   " Command-Return for fullscreen
   macmenu Window.Toggle\ Full\ Screen\ Mode key=<D-CR>
 	
+  " Command-Shift-F for Ack
+  map <D-F> :Ack<space>
+  
 	set guioptions-=T
 	map <D-/> <plug>NERDCommenterToggle<CR>
 	imap <D-/> <Esc><plug>NERDCommenterToggle<CR>i
@@ -39,5 +42,13 @@ if has("gui_macvim")
 		endif
 	endfunction
 
+  function s:UpdateCommandT(...)
+    if exists(":CommandTFlush") == 2
+      CommandTFlush
+    endif
+  endfunction
+
 	autocmd VimEnter * call s:CdIfDirectory(expand("<amatch>"))
+  autocmd FocusGained * call s:UpdateCommandT()
+   
 endif
