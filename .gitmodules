@@ -43,3 +43,6 @@
 [submodule "vim/bundle/ack"]
 	path = vim/bundle/ack
 	url = git://github.com/mileszs/ack.vim.git
+[submodule "vim/bundle/sweet-rspec-vim"]
+	path = vim/bundle/sweet-rspec-vim
+	url = git://github.com/duskhacker/sweet-rspec-vim.git
