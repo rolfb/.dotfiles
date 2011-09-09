@@ -46,3 +46,6 @@
 [submodule "vim/bundle/sweet-rspec-vim"]
 	path = vim/bundle/sweet-rspec-vim
 	url = git://github.com/duskhacker/sweet-rspec-vim.git
+[submodule "vim/bundle/vim-ruby"]
+	path = vim/bundle/vim-ruby
+	url = git://github.com/vim-ruby/vim-ruby.git

@@ -1,4 +1,5 @@
 export EDITOR=vim
+export PATH=/usr/local/bin:$PATH
 export JSTESTDRIVER_HOME=~/bin/java
 if [[ -s /Users/rolf/.rvm/scripts/rvm ]] ; then source /Users/rolf/.rvm/scripts/rvm ; fi
 source ~/.bash_colors
