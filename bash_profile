@@ -6,7 +6,7 @@ source ~/.bash_colors
 source ~/.git-completion.sh
 alias be='bundle exec'
 alias mate="mvim"
-
+set -o vi
 # ACTUAL CUSTOMIZATION OH NOES!
 # function minutes_since_last_commit {
 #     now=`date +%s`
