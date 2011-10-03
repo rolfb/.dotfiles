@@ -15,7 +15,7 @@ set ruler
 
 set encoding=utf-8
 
-set nowrap
+set wrap
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
@@ -66,3 +66,12 @@ endif
 
 " Some overrides for the colorschemes
 hi Search guifg=NONE gui=underline
+
+" Unimpaired configuration
+" Bubble single lines
+nmap <C-Up> [e
+nmap <C-Down> ]e
+" Bubble multiple lines
+vmap <C-Up> [egv
+vmap <C-Down> ]egv
+
