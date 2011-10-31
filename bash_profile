@@ -1,11 +1,12 @@
 export EDITOR=vim
-export PATH=/usr/local/bin:$PATH
+export PATH=/usr/local/share/python:/usr/local/bin:$PATH
 export JSTESTDRIVER_HOME=~/bin/java
 if [[ -s /Users/rolf/.rvm/scripts/rvm ]] ; then source /Users/rolf/.rvm/scripts/rvm ; fi
 source ~/.bash_colors
 source ~/.git-completion.sh
 alias be='bundle exec'
 alias mate="mvim"
+export HISTTIMEFORMAT='%d %b %H:%M  '
 
 # ACTUAL CUSTOMIZATION OH NOES!
 # function minutes_since_last_commit {
