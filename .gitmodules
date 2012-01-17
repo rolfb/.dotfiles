@@ -61,3 +61,6 @@
 [submodule "vim/bundle/vim-matchit"]
 	path = vim/bundle/vim-matchit
 	url = git://github.com/tsaleh/vim-matchit.git
+[submodule "solarized"]
+	path = solarized
+	url = git://github.com/altercation/solarized.git
