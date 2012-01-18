@@ -4,8 +4,6 @@ if has("gui_macvim")
 
   " Command-T for CommandT
   macmenu &File.New\ Tab key=<D-T>
-  map <D-t> :CommandT<CR>
-  imap <D-t> <Esc>:CommandT<CR>
 
   " Command-Return for fullscreen
   macmenu Window.Toggle\ Full\ Screen\ Mode key=<D-CR>
@@ -42,13 +40,6 @@ if has("gui_macvim")
 		endif
 	endfunction
 
-  function s:UpdateCommandT(...)
-    if exists(":CommandTFlush") == 2
-      CommandTFlush
-    endif
-  endfunction
-
 	autocmd VimEnter * call s:CdIfDirectory(expand("<amatch>"))
-  autocmd FocusGained * call s:UpdateCommandT()
    
 endif

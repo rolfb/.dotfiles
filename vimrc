@@ -5,8 +5,6 @@ call pathogen#runtime_append_all_bundles()
 
 let mapleader=","
 
-let g:CommandTMaxHeight=20
-
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
