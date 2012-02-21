@@ -39,7 +39,7 @@ export HISTTIMEFORMAT='%d %b %H:%M  '
 
 
 function parse_git_branch {
-  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/[\1]\ /'
+  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/[\1]\ /'
 }
 
 PS1='\[$(tput setaf 2)\]\u\[$(tput sgr0)\]@\[$(tput setaf 3)\]\h\[$(tput sgr0)\] \W \[$(tput setaf 5)\]$(parse_git_branch)\[$(tput sgr0)\]$(~/.rvm/bin/rvm-prompt i v) ($?) ∴ '

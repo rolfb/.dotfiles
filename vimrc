@@ -42,7 +42,7 @@ set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*
 
 filetype plugin indent on
 
-set gfn=Menlo:h12
+set gfn=Inconsolata-g:h13
 set ft=ruby
 
 set nolist

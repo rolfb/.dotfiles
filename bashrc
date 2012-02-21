@@ -1,4 +1,6 @@
 export ACK_COLOR_MATCH='red'
+export LC_CTYPE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
 
 mkv2mov() {
   # usage: mkv2mov video.mkv <audio kb>k
@@ -41,3 +43,6 @@ if [[ ! $PROMPT_COMMAND =~ autojump ]]; then
 fi 
 alias jumpstat="autojump --stat"
 function j { new_path="$(autojump $@)";if [ -n "$new_path" ]; then echo -e "\\033[31m${new_path}\\033[0m"; cd "$new_path";else false; fi }
+
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
