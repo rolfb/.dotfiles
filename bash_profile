@@ -6,6 +6,7 @@ source ~/.bash_colors
 source ~/.git-completion.sh
 alias be='bundle exec'
 alias mate="mvim"
+alias mvim="vim"
 export HISTTIMEFORMAT='%d %b %H:%M  '
 
 # ACTUAL CUSTOMIZATION OH NOES!
