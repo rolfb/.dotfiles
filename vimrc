@@ -12,6 +12,8 @@ set number
 set ruler
 
 set encoding=utf-8
+set mouse=a
+set clipboard=unnamed
 
 set nowrap
 set tabstop=2
@@ -42,7 +44,7 @@ set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*
 
 filetype plugin indent on
 
-set gfn=Inconsolata-g:h13
+set gfn=Menlo:h13b
 set ft=ruby
 
 set nolist
@@ -76,4 +78,7 @@ nmap <C-Down> ]e
 " Bubble multiple lines
 vmap <C-Up> [egv
 vmap <C-Down> ]egv
+
+map <leader>t :!rspec <C-R>="spec/".substitute(expand("%:r"), "app/", "", "")."_spec.rb"<CR><LF>
+map <leader>T :!rspec %<Return>
 
