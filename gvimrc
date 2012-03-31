@@ -41,5 +41,4 @@ if has("gui_macvim")
 	endfunction
 
 	autocmd VimEnter * call s:CdIfDirectory(expand("<amatch>"))
-   
 endif
