@@ -5,6 +5,7 @@ call pathogen#runtime_append_all_bundles()
 
 let mapleader=","
 
+set backspace=2 " make backspace work like most other apps
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
@@ -13,8 +14,8 @@ set ruler
 
 set encoding=utf-8
 set mouse=a
-set clipboard=unnamed
 
+set nrformats=
 set nowrap
 set tabstop=2
 set shiftwidth=2
@@ -45,24 +46,15 @@ set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*
 filetype plugin indent on
 
 set gfn=Menlo:h13b
-set ft=ruby
 
 set nolist
 
 set go=
 
-set background=dark
+set background=light
 
-
-if &t_Co >= 256 || has("gui_running")
-   colorscheme solarized
-endif
-
-if &t_Co > 2 || has("gui_running")
-   " switch syntax highlighting on, when the terminal has colors
-   syntax on
-endif
-
+syntax enable
+colorscheme solarized
 
 " Some overrides for the colorschemes
 " GRB: Put useful info in status line
