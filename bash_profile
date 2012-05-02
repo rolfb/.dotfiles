@@ -4,6 +4,7 @@ export JSTESTDRIVER_HOME=~/bin/java
 if [[ -s /Users/rolf/.rvm/scripts/rvm ]] ; then source /Users/rolf/.rvm/scripts/rvm ; fi
 source ~/.bash_colors
 source ~/.git-completion.sh
+export CLICOLOR=1
 alias be='bundle exec'
 alias mate="mvim"
 alias mvim="vim"
