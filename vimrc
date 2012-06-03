@@ -51,7 +51,7 @@ set nolist
 
 set go=
 
-set background=light
+set background=dark
 
 syntax enable
 colorscheme solarized
