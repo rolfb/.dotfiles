@@ -1,7 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
-let g:netrw_dirhist_1='/Users/rolf/Work/viksund/viksund.no'
-let g:netrw_dirhist_2='/Users/rolf/Work/veko/vinterveko'
-let g:netrw_dirhist_3='/Users/rolf/Work/firmatur/onkel_mac'
-let g:netrw_dirhist_4='/Users/rolf/Work/vassdaleriksen/vassdaleriksen.no'
-let g:netrw_dirhist_5='/Users/rolf/Work/baatsans/yr_api'
