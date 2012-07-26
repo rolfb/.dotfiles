@@ -45,7 +45,7 @@ set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*
 
 filetype plugin indent on
 
-set gfn=Menlo:h13b
+set gfn=Menlo:h12b
 
 set nolist
 
