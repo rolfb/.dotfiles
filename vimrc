@@ -74,3 +74,6 @@ vmap <C-Down> ]egv
 map <leader>T :!rspec <C-R>="spec/".substitute(expand("%:r"), "app/", "", "")."_spec.rb"<CR><LF>
 map <leader>t :!rspec %<Return>
 
+" Add other ctags files
+set tags +=gems.tags
+set tags +=stdlib.tags
