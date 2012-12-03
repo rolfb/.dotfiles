@@ -5,6 +5,10 @@ call pathogen#runtime_append_all_bundles()
 
 let mapleader=","
 
+" folds
+let ruby_fold=1
+set foldlevelstart=99
+
 set backspace=2 " make backspace work like most other apps
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
@@ -71,6 +75,10 @@ nmap <C-Down> ]e
 vmap <C-Up> [egv
 vmap <C-Down> ]egv
 
+"ruby
+let ruby_no_expensive = 1
+let ruby_operators = 1
+let ruby_space_errors = 1
 map <leader>T :!rspec <C-R>="spec/".substitute(expand("%:r"), "app/", "", "")."_spec.rb"<CR><LF>
 map <leader>t :!rspec %<Return>
 
