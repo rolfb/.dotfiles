@@ -1,6 +1,25 @@
 export ACK_COLOR_MATCH='red'
 export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
+export EDITOR=vim
+export PATH=/usr/local/share/python:/usr/local/bin:$PATH
+export JSTESTDRIVER_HOME=~/bin/java
+export JRUBY_OPTS="-J-XX:+TieredCompilation -J-XX:TieredStopAtLevel=1 -J-noverify -X-C -Xcompile.invokedynamic=false"
+if [[ -s /Users/rolf/.rvm/scripts/rvm ]] ; then source /Users/rolf/.rvm/scripts/rvm ; fi
+source ~/.bash_colors
+source ~/.git-completion.sh
+export CLICOLOR=1
+alias be='bundle exec'
+alias mate="mvim"
+alias mvim="vim"
+export HISTTIMEFORMAT='%d %b %H:%M  '
+
+function parse_git_branch {
+  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/[\1]\ /'
+}
+
+PS1='\[$(tput setaf 2)\]\u\[$(tput sgr0)\]@\[$(tput setaf 3)\]\h\[$(tput sgr0)\] \W \[$(tput setaf 5)\]$(parse_git_branch)\[$(tput sgr0)\]$(~/.rvm/bin/rvm-prompt i v) ($?) ∴ '
+
 
 mkv2mov() {
   # usage: mkv2mov video.mkv <audio kb>k
@@ -9,40 +28,10 @@ mkv2mov() {
 
 #autojump
 
-
-_autojump() 
-{
-        local cur
-        cur=${COMP_WORDS[*]:1}
-        while read i
-        do
-            COMPREPLY=("${COMPREPLY[@]}" "${i}")
-        done  < <(autojump --bash --completion $cur)
-}
-complete -F _autojump j
-
-if [ -n "$XDG_DATA_HOME" ]
-then
-    export AUTOJUMP_DATA_DIR="$XDG_DATA_HOME/autojump"
-else
-    export AUTOJUMP_DATA_DIR=~/.local/share/autojump
-fi
-
-if [ ! -e "${AUTOJUMP_DATA_DIR}" ]
-then
-    mkdir -p "${AUTOJUMP_DATA_DIR}"
-    mv ~/.autojump_py "${AUTOJUMP_DATA_DIR}/autojump_py" 2>>/dev/null #migration
-    mv ~/.autojump_py.bak "${AUTOJUMP_DATA_DIR}/autojump_py.bak" 2>>/dev/null
-    mv ~/.autojump_errors "${AUTOJUMP_DATA_DIR}/autojump_errors" 2>>/dev/null
-fi
-
-export AUTOJUMP_HOME=${HOME}
-AUTOJUMP='{ [[ "$AUTOJUMP_HOME" == "$HOME" ]] && (autojump -a "$(pwd -P)"&)>/dev/null 2>>${AUTOJUMP_DATA_DIR}/.autojump_errors;} 2>/dev/null'
-if [[ ! $PROMPT_COMMAND =~ autojump ]]; then
-  export PROMPT_COMMAND="$AUTOJUMP ; ${PROMPT_COMMAND:-:}"
-fi 
 alias jumpstat="autojump --stat"
-function j { new_path="$(autojump $@)";if [ -n "$new_path" ]; then echo -e "\\033[31m${new_path}\\033[0m"; cd "$new_path";else false; fi }
+[[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 
+alias irb=pry
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+PATH=$PATH:/usr/local/share/npm/bin # Add NPM to PATH
