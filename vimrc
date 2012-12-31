@@ -45,13 +45,18 @@ set noerrorbells
 set nobackup
 set noswapfile
 
+" Highlight characters in column >80
+" set colorcolumn=80
+
+" Tab completion
+set wildmode=list:longest,list:full
 set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*
 
 filetype plugin indent on
 
-set gfn=Inconsolata-g:h12g
+"set gfn="Hume Mono":h13Medium
 
-set nolist
+set list listchars=tab:»\ ,trail:·,nbsp:·
 
 set go=
 
@@ -81,6 +86,12 @@ let ruby_operators = 1
 let ruby_space_errors = 1
 map <leader>T :!rspec <C-R>="spec/".substitute(expand("%:r"), "app/", "", "")."_spec.rb"<CR><LF>
 map <leader>t :!rspec %<Return>
+
+" Thorfile, Rakefile and Gemfile are Ruby
+au BufRead,BufNewFile {Gemfile,Gemfile.local,Rakefile,Thorfile,Guardfile,config.ru,*.prawn} set ft=ruby
+
+" CTags
+map <Leader>rt :!ctags --extra=+f -R *<CR><CR>
 
 " Add other ctags files
 set tags +=gems.tags
