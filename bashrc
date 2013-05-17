@@ -12,7 +12,11 @@ export CLICOLOR=1
 alias be='bundle exec'
 alias mate="mvim"
 alias mvim="vim"
+alias jsc="/System/Library/Frameworks/JavaScriptCore.framework/Versions/A/Resources/jsc"
 export HISTTIMEFORMAT='%d %b %H:%M  '
+export HISTCONTROL=ignoreboth
+
+export REDLINE_HOME=$HOME/git/redline-smalltalk/target/redline-deploy/
 
 function parse_git_branch {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/[\1]\ /'
@@ -28,6 +32,7 @@ mkv2mov() {
 
 #autojump
 
+export AUTOJUMP_IGNORE_CASE=1
 alias jumpstat="autojump --stat"
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 
