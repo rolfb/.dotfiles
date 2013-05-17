@@ -50,7 +50,7 @@ set noswapfile
 
 " Tab completion
 set wildmode=list:longest,list:full
-set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*
+set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*,*/tmp/*
 
 filetype plugin indent on
 
@@ -96,3 +96,13 @@ map <Leader>rt :!ctags --extra=+f -R *<CR><CR>
 " Add other ctags files
 set tags +=gems.tags
 set tags +=stdlib.tags
+
+" vim-ruby-xmpfilter
+
+nmap <buffer> <F5> <Plug>(xmpfilter-run)
+xmap <buffer> <F5> <Plug>(xmpfilter-run)
+imap <buffer> <F5> <Plug>(xmpfilter-run)
+
+nmap <buffer> <F4> <Plug>(xmpfilter-mark)
+xmap <buffer> <F4> <Plug>(xmpfilter-mark)
+imap <buffer> <F4> <Plug>(xmpfilter-mark)
