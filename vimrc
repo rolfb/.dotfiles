@@ -60,9 +60,10 @@ set list listchars=tab:»\ ,trail:·,nbsp:·
 
 set go=
 
-set background=dark
+set background=light
 
 syntax enable
+let g:solarized_termcolors=256
 colorscheme solarized
 
 " Some overrides for the colorschemes
@@ -81,9 +82,10 @@ vmap <C-Up> [egv
 vmap <C-Down> ]egv
 
 "ruby
-let ruby_no_expensive = 1
-let ruby_operators = 1
-let ruby_space_errors = 1
+"let ruby_no_expensive=1
+"let g:ruby_path = system('rvm current')
+let ruby_operators=1
+let ruby_space_errors=1
 map <leader>T :!rspec <C-R>="spec/".substitute(expand("%:r"), "app/", "", "")."_spec.rb"<CR><LF>
 map <leader>t :!rspec %<Return>
 
@@ -106,3 +108,7 @@ imap <buffer> <F5> <Plug>(xmpfilter-run)
 nmap <buffer> <F4> <Plug>(xmpfilter-mark)
 xmap <buffer> <F4> <Plug>(xmpfilter-mark)
 imap <buffer> <F4> <Plug>(xmpfilter-mark)
+
+" syntax help
+
+map <leader>i :echom synIDattr(synID(line("."),col("."),1),"name")<CR>

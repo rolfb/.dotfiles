@@ -3,7 +3,7 @@
 	url = git://git.wincent.com/command-t.git
 [submodule "vim/bundle/vim-colors-solarized"]
 	path = vim/bundle/vim-colors-solarized
-	url = git://github.com/altercation/vim-colors-solarized.git
+	url = git://github.com/rolfb/vim-colors-solarized.git
 [submodule "osx-lion-terminal.app-colors-solarized"]
 	path = osx-lion-terminal.app-colors-solarized
 	url = git://github.com/tomislav/osx-lion-terminal.app-colors-solarized.git
