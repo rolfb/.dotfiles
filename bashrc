@@ -5,7 +5,6 @@ export EDITOR=vim
 export PATH=/usr/local/share/python:/usr/local/bin:$PATH
 export JSTESTDRIVER_HOME=~/bin/java
 export JRUBY_OPTS="-J-XX:+TieredCompilation -J-XX:TieredStopAtLevel=1 -J-noverify -X-C -Xcompile.invokedynamic=false"
-if [[ -s /Users/rolf/.rvm/scripts/rvm ]] ; then source /Users/rolf/.rvm/scripts/rvm ; fi
 source ~/.bash_colors
 source ~/.git-completion.sh
 export CLICOLOR=1
@@ -22,7 +21,7 @@ function parse_git_branch {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/[\1]\ /'
 }
 
-PS1='\[$(tput setaf 2)\]\u\[$(tput sgr0)\]@\[$(tput setaf 3)\]\h\[$(tput sgr0)\] \W \[$(tput setaf 5)\]$(parse_git_branch)\[$(tput sgr0)\]$(~/.rvm/bin/rvm-prompt i v) ($?) ∴ '
+PS1='\[$(tput setaf 2)\]\u\[$(tput sgr0)\]@\[$(tput setaf 3)\]\h\[$(tput sgr0)\] \W \[$(tput setaf 5)\]$(parse_git_branch)\[$(tput sgr0)\] ($?) ∴ '
 
 
 mkv2mov() {
@@ -38,5 +37,4 @@ alias jumpstat="autojump --stat"
 
 alias irb=pry
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 PATH=$PATH:/usr/local/share/npm/bin # Add NPM to PATH
