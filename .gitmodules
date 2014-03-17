@@ -70,10 +70,6 @@
 	path = vim/bundle/vim-ruby-refactoring
 	url = git://github.com/ecomba/vim-ruby-refactoring.git
   ignore = dirty
-[submodule "vim/bundle/vim-matchit"]
-	path = vim/bundle/vim-matchit
-	url = git://github.com/tsaleh/vim-matchit.git
-  ignore = dirty
 [submodule "solarized"]
 	path = solarized
 	url = git://github.com/altercation/solarized.git
