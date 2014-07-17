@@ -54,7 +54,7 @@ set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*,*/tmp/*
 
 filetype plugin indent on
 
-"set gfn="Hume Mono":h13Medium
+" set gfn="Consolas":h14
 
 set list listchars=tab:»\ ,trail:·,nbsp:·
 
@@ -63,7 +63,7 @@ set go=
 set background=light
 
 syntax enable
-let g:solarized_termcolors=256
+let g:solarized_termcolors=16
 colorscheme solarized
 
 " Some overrides for the colorschemes
@@ -82,7 +82,7 @@ vmap <C-Up> [egv
 vmap <C-Down> ]egv
 
 "ruby
-"let ruby_no_expensive=1
+let ruby_no_expensive=1
 "let g:ruby_path = system('rvm current')
 let ruby_operators=1
 let ruby_space_errors=1
@@ -112,3 +112,17 @@ imap <buffer> <F4> <Plug>(xmpfilter-mark)
 " syntax help
 
 map <leader>i :echom synIDattr(synID(line("."),col("."),1),"name")<CR>
+
+" Ctrlp
+if executable("ag")
+  let g:ctrlp_user_command = 'ag %s -i -l --nocolor --hidden -g ""'
+endif
+let g:ctrlp_cmd = 'CtrlPMixed'
+let g:ctrlp_lazy_update = 150 " ms
+let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$\|\.bundle$'
+let g:ctrlp_max_depth = 10
+let g:ctrlp_switch_buffer = 0
+let g:ctrlp_mruf_relative = 1
+let g:ctrlp_working_path_mode = 0
+let g:ctrlp_show_hidden = 1
+let g:ctrlp_extensions = ['tag', 'buffertag', 'mixed']

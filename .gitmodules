@@ -138,3 +138,12 @@
 	path = vim/bundle/emmet-vim
   url = git@github.com:mattn/emmet-vim.git
   ignore = dirty
+[submodule "vim/bundle/bisectly"]
+	path = vim/bundle/bisectly
+	url = git@github.com:dahu/bisectly.git
+[submodule "vim/bundle/ag.vim"]
+	path = vim/bundle/ag.vim
+	url = git@github.com:rking/ag.vim.git
+[submodule "vim/bundle/vim-golang"]
+	path = vim/bundle/vim-golang
+	url = git@github.com:jnwhiteh/vim-golang.git
