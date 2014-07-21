@@ -2,7 +2,8 @@
 export LC_CTYPE=en_US.UTF-8
 export LANG=en_US.UTF-8
 export LC_ALL=$LANG
-export PATH=/usr/local/share/python:~/bin:/usr/local/bin:/usr/local/share/npm/bin:$PATH
+export GOPATH=~/go
+export PATH=/usr/local/share/python:~/bin:/usr/local/bin:/usr/local/share/npm/bin:$GOPATH/bin:$PATH
 
 # Set editor
 export EDITOR="vim"
