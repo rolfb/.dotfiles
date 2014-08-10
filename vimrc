@@ -64,7 +64,7 @@ set background=light
 
 syntax enable
 let g:solarized_termcolors=16
-colorscheme solarized
+colorscheme Tomorrow-Night
 
 " Some overrides for the colorschemes
 " GRB: Put useful info in status line
