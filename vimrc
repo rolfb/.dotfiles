@@ -60,7 +60,7 @@ set list listchars=tab:»\ ,trail:·,nbsp:·
 
 set go=
 
-set background=light
+" set background=light
 
 syntax enable
 let g:solarized_termcolors=16
