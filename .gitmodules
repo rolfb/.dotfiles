@@ -130,10 +130,6 @@
 	path = vim/bundle/vim-classpath
 	url = git://github.com/tpope/vim-classpath.git
   ignore = dirty
-[submodule "vim/bundle/vim-clojure-static"]
-	path = vim/bundle/vim-clojure-static
-	url = git@github.com:guns/vim-clojure-static.git
-  ignore = dirty
 [submodule "vim/bundle/emmet-vim"]
 	path = vim/bundle/emmet-vim
   url = git@github.com:mattn/emmet-vim.git
