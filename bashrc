@@ -15,8 +15,6 @@ alias jsc="/System/Library/Frameworks/JavaScriptCore.framework/Versions/A/Resour
 export HISTTIMEFORMAT='%d %b %H:%M  '
 export HISTCONTROL=ignoreboth
 
-export REDLINE_HOME=$HOME/git/redline-smalltalk/target/redline-deploy/
-
 function parse_git_branch {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/[\1]\ /'
 }
