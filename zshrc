@@ -37,6 +37,7 @@ export PROMPT
 alias jsc="/System/Library/Frameworks/JavaScriptCore.framework/Versions/A/Resources/jsc"
 
 # Autojump
+export AUTOJUMP_KEEP_SYMLINKS=1
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 
 # Chruby
